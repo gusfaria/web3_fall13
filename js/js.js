@@ -66,4 +66,19 @@ jQuery(document).ready(function ($) {
     });
 
 
+var attributes = [
+    "AMAZING",
+    "VERY SMART",
+    "HANDSOME",
+    "FUN"
+    ];
+    
+    setInterval(function() {
+        var i = Math.round((Math.random()) * attributes.length);
+        if (i == attributes.length) --i;
+        $("#dynamictxt").html(attributes[i]);
+    }, 5 * 200);
+
+
+
 });
