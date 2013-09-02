@@ -183,6 +183,21 @@ div.wrapper02{
 #slide3{
 	background-color:#b6c10b;
 }
+
+.wrapper3{
+	padding-top: 10%;
+}
+
+.definition{
+	/*left:40px;*/
+	margin: 0 auto;
+	font-size:35px;
+	color:rgba(51,51,51,0.5);
+	text-align: center;
+
+}
+
+
 #slide3 img:first-child{
 	position:absolute;
 top: 700px;
@@ -218,7 +233,7 @@ left: 300px;
 *******************************/
 
 #slide4{
-	background-image:url(../images/Slide4/desktop4.jpg);
+	background: white;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
