@@ -2,18 +2,21 @@
 /* CSS Document */
 
 @font-face {
-    font-family: 'BebasRegular';
+/*    font-family: 'BebasRegular';
     src: url('font/BEBAS___-webfont.eot');
     src: url('font/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
          url('font/BEBAS___-webfont.woff') format('woff'),
          url('font/BEBAS___-webfont.ttf') format('truetype'),
          url('font/BEBAS___-webfont.svg#BebasRegular') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: normal;*/
 
+    font-family: 'Gotham';
+    src: url('font/Gotham-XLight.otf');
+    src: url('font/Gotham-Book.otf');
 }
 html,body{
- font-family: 'BebasRegular';
+ font-family: 'Gotham';
 	width:100%;
 	height:100%;
 }
@@ -34,21 +37,14 @@ html,body{
 	border-bottom:1px solid black;
 	text-align:left;
 	width:53px;
+	font-size: 13px;
 }
 .navigation li:hover,.active{
 	font-size:25px;
 	cursor:pointer;
 	width:100px!important;
 }
-.envatologo{
-position:fixed;
-top:50%;
-left:50%;
-width:446px;
-margin-top:-41px;
-margin-left:-223px;
-z-index:1;
-}
+
 .slide{
 	background-attachment: fixed;
 	width:100%;
@@ -89,9 +85,32 @@ z-index:1;
  SLIDE 1 
 *******************************/
 #slide1{
-	background-color:#5c9900;
+
+background-image: url('../images/bg-about.jpg');
 	
 }
+
+.myName{
+position:fixed;
+top:50%;
+left:50%;
+width:500px;
+margin-top:-41px;
+margin-left:-253px;
+}
+
+h2.myNameIs{
+position: fixed;
+color: white;
+top: 35%;
+left: 50%;
+margin-left: -120px;
+font-family: 'Gotham', Helvetica, Arial, sans-serif;
+font-size: 30px;
+font-weight: 100;
+}
+
+
 /******************************
  SLIDE 2 
 *******************************/
@@ -99,10 +118,29 @@ z-index:1;
 	background-color:#005c99;
 	
 }
+
+#slide2.div{
+	padding-top: 100px; 
+}
+
+div.wrapper02{
+	padding-top: 10%;
+
+}
+
+
+.slide2text{
+	left:40px;
+	font-size:28px;
+	color:rgba(51,51,51,0.5);
+
+}
+
+
 #slide2 img:first-child{
 	position:absolute;
-top: 700px;
-left: -150px;
+	top: 700px;
+	left: -150px;
 }
 #slide2 img:nth-child(2){
 	position:absolute;
