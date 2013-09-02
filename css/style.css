@@ -102,9 +102,9 @@ margin-left:-253px;
 h2.myNameIs{
 position: fixed;
 color: white;
-top: 35%;
+top: 38%;
 left: 50%;
-margin-left: -120px;
+margin-left: -165px;
 font-family: 'Gotham', Helvetica, Arial, sans-serif;
 font-size: 30px;
 font-weight: 100;
@@ -124,8 +124,7 @@ font-weight: 100;
 }
 
 div.wrapper02{
-	padding-top: 10%;
-
+	padding-top: 20%;
 }
 
 
@@ -133,7 +132,6 @@ div.wrapper02{
 	left:40px;
 	font-size:28px;
 	color:rgba(51,51,51,0.5);
-
 }
 
 

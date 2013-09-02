@@ -69,15 +69,27 @@ jQuery(document).ready(function ($) {
 var attributes = [
     "AMAZING",
     "VERY SMART",
-    "HANDSOME",
+    "FRIENDLY",
     "FUN"
     ];
     
-    setInterval(function() {
-        var i = Math.round((Math.random()) * attributes.length);
-        if (i == attributes.length) --i;
-        $("#dynamictxt").html(attributes[i]);
-    }, 5 * 200);
+setInterval(function() {
+    var i = Math.round((Math.random()) * attributes.length);
+    if (i == attributes.length) --i;
+    $("#dynamictxt").html(attributes[i]);
+}, 5 * 200);
+
+
+$('#button').click(function(){
+    var myQuality = $('#input').val();
+    console.log(myQuality);
+
+
+    $('#input').val("");
+    console.log(attributes);
+});
+
+
 
 
 
