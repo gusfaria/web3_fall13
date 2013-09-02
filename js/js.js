@@ -83,8 +83,6 @@ setInterval(function() {
 $('#button').click(function(){
     var myQuality = $('#input').val();
     console.log(myQuality);
-
-
     $('#input').val("");
     console.log(attributes);
 });
