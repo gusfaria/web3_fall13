@@ -131,7 +131,7 @@ div.wrapper02{
 .slide2text{
 	left:40px;
 	font-size:28px;
-	color:rgba(51,51,51,0.5);
+	color:rgba(51,51,51,0.7);
 }
 
 
@@ -183,7 +183,7 @@ div.wrapper02{
 }
 
 .wrapper3{
-	padding-top: 10%;
+	padding-top: 25%;
 }
 
 .definition{
@@ -239,9 +239,18 @@ left: 300px;
 }
 #slide4 .parallaxbg{
 	position:absolute;
-	right:40px;
-	top:40px;
-	font-size:28px;
+	left: 37%;
+	top:45%;
+	font-size:52px;
 	color:rgba(51,51,51,0.3);
+}
+
+#slide4 .owen{
+	font-family: 'Comic Sans MS', 'Comic Sans', serif;
+	size: 8px;
+	position: absolute;
+	bottom: 20px;
+	left: 47%;
+	color: rgba(0,255,0,1.0);
 }
 
