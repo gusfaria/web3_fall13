@@ -94,9 +94,10 @@ background-image: url('../images/bg-about.jpg');
 position:fixed;
 top:50%;
 left:50%;
-width:500px;
-margin-top:-41px;
-margin-left:-253px;
+width:1600px;
+margin-top:-320px;
+margin-left:-803px;
+text-align: center;
 }
 
 h2.myNameIs{
