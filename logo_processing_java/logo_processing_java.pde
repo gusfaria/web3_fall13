@@ -1,5 +1,4 @@
 /* @pjs preload="logo.jpg, logo.png, sprite.jpg";*/
-/* @pjs transparent="true";*/
 
 PImage img;
 PImage sprite;
@@ -19,7 +18,7 @@ void setup () {
   img = loadImage ("logo.jpg");
   sprite = loadImage ("sprite.jpg");
 
-  sampling = 3;
+  sampling = 2;
 
   particles = new ArrayList<Particle>();
 
@@ -37,13 +36,13 @@ void setup () {
     for ( int y = 0 ; y < h ; y+=sampling )
     {
 
-      PVector pos = new PVector (x - xOffset, y - yOffset);
+      PVector pos = new PVector (x + xOffset, y + yOffset);
       color tempColor = img.pixels[x + (y * width)];
       //particles.add (new Particle(width/2, 0, 48))
       if (tempColor != color (255)) particles.add ( new Particle ( pos, tempColor ) ) ;
     }
   }
-
+  
   frameRate (30);
   numParticles = (img.width * img.height) / sampling;
 
@@ -61,11 +60,7 @@ void draw () {
   PVector diff = new PVector(0, 0);
   float dist;
   float ratio;
-  //PVector mousePos = new PVector (mouseX, mouseY);
-  float mousePosX = mouseX;
-  float mousePosY = mouseY;
-
-
+  PVector mousePos = new PVector (mouseX, mouseY);
 
   for (int i = 0; i < particles.size(); i++) {
 
@@ -74,19 +69,18 @@ void draw () {
     particles.get(i).velocity.mult(friction);
     particles.get(i).acceleration = new PVector();
 
-    diff.x = mousePosX - particles.get(i).position.x;
-    diff.y = mousePosY - particles.get(i).position.y;
+    diff = PVector.sub(mousePos, particles.get(i).position);
 
+    //dist = dist(0, 0, diff.x, diff.y);
     dist = sqrt ((diff.x*diff.x) + (diff.y*diff.y));
 
-    //    diff = PVector.sub(mousePos, particles.get(i).position);
 
     if ( dist < forceRadius )
     {
       ratio = -1 + dist / forceRadius ;
       //Repulsion
       if ( cursorMode == 0 ) {
-
+     
         PVector tempDiff = PVector.mult(diff, ratio);
         particles.get(i).acceleration.sub(tempDiff);
       } 
@@ -100,9 +94,9 @@ void draw () {
       //Move back to the original position
       particles.get(i).acceleration.x += springFactor * (particles.get(i).spawnPoint.x - particles.get(i).position.x);
       particles.get(i).acceleration.y += springFactor * (particles.get(i).spawnPoint.y - particles.get(i).position.y) ;
-      // if (i%50 == 0) println (particles.get(i).spawnPoint.x - particles.get(i).position.x) ;
+     // if (i%50 == 0) println (particles.get(i).spawnPoint.x - particles.get(i).position.x) ;
     }
-    //
+
     particles.get(i).velocity.add(PVector.mult(particles.get(i).acceleration, ratio));
     particles.get(i).position.add(particles.get(i).velocity);
   }  
@@ -113,8 +107,8 @@ void draw () {
     //rect (particles.get(i).position.x, particles.get(i).position.y, 3, 3);
     tint (particles.get(i).col);
     image (sprite, particles.get(i).position.x, particles.get(i).position.y);
+    
   }
 
   //println (particles.size());
 }
-

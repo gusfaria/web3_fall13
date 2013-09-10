@@ -1,4 +1,4 @@
-/* @pjs preload="logo.jpg, logo.png, sprite.jpg";*/
+/* @pjs preload="logo.jpg, logo.png, sprite2.png, sprite.gif";*/
 /* @pjs transparent="true";*/
 
 PImage img;
@@ -15,9 +15,9 @@ int cursorMode;
 
 void setup () {
 
-  size (500, 49, P2D);
+  size (800, 600, P2D);
   img = loadImage ("logo.jpg");
-  sprite = loadImage ("sprite.jpg");
+  sprite = loadImage ("sprite2.png");
 
   sampling = 3;
 
@@ -37,10 +37,12 @@ void setup () {
     for ( int y = 0 ; y < h ; y+=sampling )
     {
 
-      PVector pos = new PVector (x - xOffset, y - yOffset);
+      PVector pos = new PVector (x + xOffset, y + yOffset);
       color tempColor = img.pixels[x + (y * width)];
       //particles.add (new Particle(width/2, 0, 48))
       if (tempColor != color (255)) particles.add ( new Particle ( pos, tempColor ) ) ;
+        
+      
     }
   }
 
@@ -48,7 +50,7 @@ void setup () {
   numParticles = (img.width * img.height) / sampling;
 
   cursorMode = 0;
-  forceRadius = 45;
+  forceRadius = 70;
   friction = 0.85;
   springFactor = 0.02;
   springEnabled = true;
@@ -56,7 +58,7 @@ void setup () {
 
 void draw () {
 
-  background (255);
+  background (255, 0);
   //image (img, 0, 0);
   PVector diff = new PVector(0, 0);
   float dist;
@@ -116,5 +118,26 @@ void draw () {
   }
 
   //println (particles.size());
+}
+
+class Particle {
+
+  PVector position, velocity;
+  PVector acceleration;
+  PVector spawnPoint;
+  color col;
+
+  Particle (PVector _position, color _color)
+  {
+    acceleration = new PVector();
+    position = _position;
+    col = _color;
+    //velocity = new PVector (random (-5, 5), random (-5, 5));
+    velocity =  new PVector();
+    spawnPoint = new PVector();
+    spawnPoint.x = _position.x;
+    spawnPoint.y = _position.y;
+    //spawnPoint = new PVector();
+  }
 }
 
