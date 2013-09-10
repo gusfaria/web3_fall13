@@ -1,4 +1,4 @@
-/* @pjs preload="logo.jpg, logo.png, sprite2.png, sprite.gif, logobmp.bmp";*/
+/* @pjs preload="sprite.png, logobmp.bmp";*/
 /* @pjs transparent="true";*/
 
 PImage img;
@@ -17,7 +17,7 @@ void setup () {
 
   size (1600, 600, P2D);
   img = loadImage ("logobmp.bmp");
-  sprite = loadImage ("sprite2.png");
+  sprite = loadImage ("sprite.png");
 
   sampling = 3;
 
@@ -81,8 +81,6 @@ void draw () {
 
     dist = sqrt ((diff.x*diff.x) + (diff.y*diff.y));
 
-    //    diff = PVector.sub(mousePos, particles.get(i).position);
-
     if ( dist < forceRadius )
     {
       ratio = -1 + dist / forceRadius ;
@@ -102,22 +100,18 @@ void draw () {
       //Move back to the original position
       particles.get(i).acceleration.x += springFactor * (particles.get(i).spawnPoint.x - particles.get(i).position.x);
       particles.get(i).acceleration.y += springFactor * (particles.get(i).spawnPoint.y - particles.get(i).position.y) ;
-      // if (i%50 == 0) println (particles.get(i).spawnPoint.x - particles.get(i).position.x) ;
     }
-    //
+    
     particles.get(i).velocity.add(PVector.mult(particles.get(i).acceleration, ratio));
     particles.get(i).position.add(particles.get(i).velocity);
   }  
 
   for (int i = 0; i < particles.size(); i++) {
 
-    //stroke (particles.get(i).col);
-    //rect (particles.get(i).position.x, particles.get(i).position.y, 3, 3);
     tint (particles.get(i).col);
     image (sprite, particles.get(i).position.x, particles.get(i).position.y);
   }
 
-  //println (particles.size());
 }
 
 class Particle {
@@ -137,7 +131,7 @@ class Particle {
     spawnPoint = new PVector();
     spawnPoint.x = _position.x;
     spawnPoint.y = _position.y;
-    //spawnPoint = new PVector();
+
   }
 }
 
