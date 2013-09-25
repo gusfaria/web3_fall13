@@ -1,0 +1,264 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	width: 100%;
+	height: 500px;
+	background-color:black;
+	font-family: 'Gotham', arial;	
+}
+
+header{
+	
+	h1{
+		margin: 0 auto;
+		height: 80px;
+		width: 100%;
+		text-align: center;
+		padding-top: 20px;
+	}
+
+	nav{
+		font-size: 14px;
+		color: #45bbf8;
+		background:#333;
+		width: 100%;
+		padding: 10px 0;
+	}
+
+	ul{
+		list-style: none;
+		text-align: center;
+		margin: 0 auto;
+		width: 80%;
+					
+		li{
+			display: inline-table;
+			text-align: center;
+			width: 20%;
+
+		
+		}
+
+		li#menu_collapsed{
+			display: none;
+		}
+	}
+
+}
+
+section#content{
+
+	article.main{
+		background:url('../img/main.jpg');
+		background-position: center 60%;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		overflow: hidden;
+		width: 100%;
+		min-height: 500px;
+		margin: 0 auto;
+	}
+
+	article.headers{
+		width: 100%;
+		padding: 10px 0;
+		text-align: center;
+
+		h2{
+			color: white;
+			font-size: 14px;
+			font-weight: 100;
+		} 
+	}
+
+	article.about_header{
+		background: #29ABE2;
+	}
+
+	div.about_wrapper{
+		background-color: #CCC;
+		width: 100%;
+		float: left;
+		padding: 30px 0;
+
+		
+			div.about_content{
+				background-color: #CCC;
+				margin: 0 auto;
+				width: 90%;
+				height: auto;
+
+				section.about_midia{
+				width: 30%;
+				height: 248px;
+				float: left; 
+				margin-right: 2%;
+
+			}
+
+			section.about_txt{	
+				width: 65%;
+				height: auto;
+				min-width: 300px;
+				float: left;
+			}
+
+			p{
+				color: black;
+				font-family: arial;
+				font-size: 15px;
+			}
+			p:first-child{
+				margin-bottom: 20px;
+			}	
+		}
+		
+	}
+
+	article.sleepers_header{
+		background: #1B98D5;
+		float: left;
+	}
+
+	div#users_wrapper{		
+		width: 90%;
+		margin: 0 auto;
+		height: 500px;
+		background: black;
+		padding: 0 5%;
+
+		div.user{
+			width: 300px;
+			height: 150px;
+			float: left;
+			background-color: #333;
+			// margin: 1%;
+		
+			img{
+				width: 150px;
+				height: 150px;
+				float: left;
+			}
+
+			div.user_content{
+				float: left;
+				width: 150px;
+				height: 150px;
+			
+				p.user_status{
+					color: white;
+					margin-top: 10px;
+					font-weight: 100;
+					margin-left: 10px;
+					margin-top: 10px;
+				}
+
+				h4.user_name{
+					font-size: 14px;
+					color: white;
+					margin: 2px 10px;
+				}
+
+				p.user_sleephours{
+					color: white;
+					font-weight: 100;
+					font-size: 13px;
+					margin-bottom: 15px;
+					margin-left: 10px;
+				}
+
+				div.buttons{
+					width: 100%;
+					height: 15px;
+					padding: 10px 0;
+					text-align: center;
+					color: white;
+					font-weight: 100;
+				}
+
+				div.buttons:hover{
+					color: black;
+				}
+
+				div.btn_poke{
+					background-color: #0071BC;
+				}
+
+				div.btn_speaker{
+					background-color: #29ABE2; 
+				}
+
+			}
+
+		}
+	}
+
+	#users_alarm{
+		margin: 0 auto;
+		float: left;
+		background: red;
+	}
+
+
+	article.login_header{
+		background: #0E84C9;
+		float: left;
+	}
+	article.contact_header{
+		background: #0071BC;
+		float: left;
+	}	
+
+	div#users_wrapper{
+	float: left;
+
+
+	}
+
+}
+
+
+@media (min-width : 480px) and (max-width: 755px) {
+	section#content{
+
+		article.main{
+			background-size: auto;
+			background-position: 30%;
+			height: auto;
+		}
+	}
+}
+
+
+@media (min-width : 320px) and (max-width: 480px) {
+
+	li.menu_item{
+		display: none;
+	}
+
+	header ul li#menu_collapsed{
+			display: inline;
+	}
+
+	article.main{
+		display: none;
+	}
+
+	div.about_wrapper{
+		display: none;
+
+	}
+
+	div#users_wrapper{
+		display: none;
+	}
+
+
+
+
+}
+
+
