@@ -66,6 +66,7 @@ section#content{
 		width: 100%;
 		padding: 10px 0;
 		text-align: center;
+		background: pink; 
 
 		h2{
 			color: white;
@@ -79,121 +80,160 @@ section#content{
 	}
 
 	div.about_wrapper{
-		background-color: #CCC;
-		width: 100%;
 		float: left;
-		padding: 30px 0;
+		background-color: #e1e1e1;
 
-		
-			div.about_content{
-				background-color: #CCC;
-				margin: 0 auto;
-				width: 90%;
-				height: auto;
+    	div.about_content {
+    		width: 80%;
+			margin: 0 auto;
+			padding: 30px 0;
 
-				section.about_midia{
-				width: 30%;
-				height: 248px;
+    		section.about_midia{
 				float: left; 
-				margin-right: 2%;
-
-			}
-
-			section.about_txt{	
-				width: 65%;
+				width: 26%;
 				height: auto;
-				min-width: 300px;
-				float: left;
-			}
+				margin: 0 auto;
+				margin-right: 2%;
+				
+				img {
+					max-width: 100%;
+					min-width: 200px;
+					overflow: hidden;
+					height: auto;
+					float: left;
+				}
+    		}
 
-			p{
-				color: black;
-				font-family: arial;
-				font-size: 15px;
-			}
-			p:first-child{
-				margin-bottom: 20px;
-			}	
+    		section.about_txt{	
+				float: left;
+				max-width: 72%;
+				height: auto;
+
+                p { 
+                    float: left;
+                    width: 100%;
+                    height: auto;
+                    color: black;
+                    font-size: 13px;
+                    padding-bottom: 30px; 
+                }
+                p:first-child {
+                    margin-bottom: 20px;
+                }   
+    		}
 		}
-		
 	}
 
 	article.sleepers_header{
 		background: #1B98D5;
-		float: left;
 	}
 
 	div#users_wrapper{		
 		width: 90%;
 		margin: 0 auto;
-		height: 500px;
+		height: auto;
 		background: black;
-		padding: 0 5%;
+		padding: 5%;
 
-		div.user{
-			width: 300px;
-			height: 150px;
-			float: left;
-			background-color: #333;
-			// margin: 1%;
-		
-			img{
-				width: 150px;
-				height: 150px;
-				float: left;
-			}
+		ul{
+			margin: 0 auto;
+			width: 100%;
+			background: red;
 
-			div.user_content{
-				float: left;
-				width: 150px;
-				height: 150px;
-			
+			li.user{
+				list-style: none;
+				background: lightblue;
+				width: 33%;
+				height: 150px; 
+				margin: 0.5px;
+				display: inline-table;
+				position: relative;
+
+				img{
+					width: 150px;
+					height: 150px;
+					float: left;
+					display: inline-table;
+				}
+
 				p.user_status{
-					color: white;
-					margin-top: 10px;
-					font-weight: 100;
-					margin-left: 10px;
-					margin-top: 10px;
-				}
-
-				h4.user_name{
-					font-size: 14px;
-					color: white;
-					margin: 2px 10px;
-				}
-
-				p.user_sleephours{
+					float: left;
 					color: white;
 					font-weight: 100;
-					font-size: 13px;
-					margin-bottom: 15px;
-					margin-left: 10px;
+					top: 10px;
+					left: 10px;
 				}
 
-				div.buttons{
-					width: 100%;
-					height: 15px;
-					padding: 10px 0;
-					text-align: center;
-					color: white;
-					font-weight: 100;
-				}
 
-				div.buttons:hover{
-					color: black;
-				}
-
-				div.btn_poke{
-					background-color: #0071BC;
-				}
-
-				div.btn_speaker{
-					background-color: #29ABE2; 
-				}
 
 			}
-
 		}
+
+
+		// div.user{
+		// 	width: 300px;
+		// 	height: 150px;
+		// 	float: left;
+		// 	background-color: #333;
+		// 	// margin: 1%;
+		
+		// 	img{
+		// 		width: 150px;
+		// 		height: 150px;
+		// 		float: left;
+		// 	}
+
+		// 	div.user_content{
+		// 		float: left;
+		// 		width: 150px;
+		// 		height: 150px;
+			
+		// 		p.user_status{
+		// 			color: white;
+		// 			margin-top: 10px;
+		// 			font-weight: 100;
+		// 			margin-left: 10px;
+		// 			margin-top: 10px;
+		// 		}
+
+		// 		h4.user_name{
+		// 			font-size: 14px;
+		// 			color: white;
+		// 			margin: 2px 10px;
+		// 		}
+
+		// 		p.user_sleephours{
+		// 			color: white;
+		// 			font-weight: 100;
+		// 			font-size: 13px;
+		// 			margin-bottom: 15px;
+		// 			margin-left: 10px;
+		// 		}
+
+		// 		div.buttons{
+		// 			width: 100%;
+		// 			height: 15px;
+		// 			padding: 10px 0;
+		// 			text-align: center;
+		// 			color: white;
+		// 			font-weight: 100;
+		// 		}
+
+		// 		div.buttons:hover{
+		// 			color: black;
+		// 		}
+
+		// 		div.btn_poke{
+		// 			background-color: #0071BC;
+		// 		}
+
+		// 		div.btn_speaker{
+		// 			background-color: #29ABE2; 
+		// 		}
+
+		// 	}
+
+		// }
 	}
 
 	#users_alarm{
@@ -229,9 +269,34 @@ section#content{
 			background-position: 30%;
 			height: auto;
 		}
+
+		div.about_wrapper {
+	    	div.about_content {
+	    		width: 90%;
+
+	    		section.about_midia{
+					width: 100%;
+					height: 200px;
+					
+					img {
+						width: 100%;
+						margin-top: -20%;
+					}
+	    		}
+
+	    		section.about_txt{	
+					max-width: 100%;
+					height: auto;
+
+
+	                p:first-child {
+	                    margin-bottom: 1px;
+	                }   
+	    		}
+			}
+		}
 	}
 }
-
 
 @media (min-width : 320px) and (max-width: 480px) {
 
@@ -256,8 +321,13 @@ section#content{
 		display: none;
 	}
 
+	.headers:hover{
+		color:black !important; //overwrites everything
+	}
 
+	#logo > a{ // direct a tag under id logo
 
+	}
 
 }
 
