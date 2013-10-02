@@ -6,31 +6,33 @@
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/style.css">
 
+        <meta name="viewport" content="width=device-width, user-scalable=false">
+
     </head>
     <body>
         <div id="container">
         	<header>
-        		<h1><img src="img/logo.png"></h1>
+        		<h1 class="myClass"><img src="img/logo.png" alt=""/></h1>
 	        	<nav id="navegation">
 	        		<ul class = "menu_list">
-	        			<li id="menu_collapsed">MENU</li>
+	        			<li id="menu_collapsed" class="menu_item">MENU</li>
 	        			<li class="about menu_item">ABOUT</li>
-	        			<li class="users menu_item">SLEEPERS</li>
+	        			<li class="users menu_item">USERS</li>
 	        			<li class ="login menu_item">LOG IN</li>
 	        			<li class="contact menu_item">CONTACT</li>
 	        		</ul>
 	        	</nav>
         	</header>
         	<section id="content">
-        		<article class="main"> </article>
+        		<div class="wrappers"><article class="main"> </article></div>
         	
                 <div style="clear:both;"></div>
 
-                <article class="headers about_header"><h2>ABOUT THIS PROJECT</h2></article>
+                <article id="about_header" class="headers about_header "><h2>ABOUT THIS PROJECT</h2></article>
                     
-                    <div class="about_wrapper">
+                    <div class="about_wrapper is_clicked wrappers" id="about_wrapper">
                         <div class = "about_content">
-                            <section class="about_midia"><img src="img/about_placeholder.png"></section>
+                            <section class="about_midia"><img src="img/about_placeholder.png" alt=""/></section>
                             <section class="about_txt">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget risus lorem. Vestibulum sit amet erat eleifend, pulvinar felis eu, placerat purus. Morbi eu sem lacus. Nunc at varius felis, at venenatis magna. Aliquam odio eros, luctus tincidunt sapien in, imperdiet facilisis turpis. Nulla dapibus accumsan nunc nec hendrerit. Aenean quis lectus venenatis, posuere augue fermentum, tempus nulla. Etiam sit amet quam tortor. Integer consectetur dui at fermentum pretium. Nullam id posuere est. Cras nec facilisis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
@@ -41,78 +43,116 @@
                     <div style="clear:both;"></div>
 
 
-                <article class="headers sleepers_header"><h2>SLEEPERS</h2></article>
-                <div id="users_wrapper">
+                <article class="headers sleepers_header" id="user_header"><h2>USERS</h2></article>
+                <div id="users_wrapper" class="wrappers">
                     <ul>
                         <li class = "user">
-                            <img src="img/user_img.jpg">
-                            <p class = "user_status">WAKE UP</p>
+                            <div class="user_container">
+                                <img src="img/user_img.jpg" alt=""/>
+                                <div class="user_info">
+                                    <p class="user_status">WAKE UP</p>
+                                    <p class="user_name">Mr. OWEN HERITAGE</p>
+                                    <p class="user_sleephours">Hours Sleeping: <strong>8 hours</strong></p>
+                                </div>
+                                <div class="button_wrapper">
+                                    <div class = "btn_poke button" id="poke">POKE</div>
+                                    <div class = "btn_alert button" id="alert">ALERT</div>
+                                </div>
+                            </div>
                         </li>
-                        <li class = "user"><img src="img/user_img.jpg"></li>
-                        <li class = "user"><img src="img/user_img.jpg"></li>
-                        <li class = "user"><img src="img/user_img.jpg"></li>
-                        <li class = "user"><img src="img/user_img.jpg"></li>
 
+                        <li class = "user">
+                            <div class="user_container">
+                                <img src="img/user_img.jpg" alt=""/>
+                                <div class="user_info">
+                                    <p class="user_status">WAKE UP</p>
+                                    <p class="user_name">Mr. OWEN HERITAGE</p>
+                                    <p class="user_sleephours">Hours Sleeping: <strong>8 hours</strong></p>
+                                </div>
+                                <div class="button_wrapper">
+                                    <div class = "btn_poke button">POKE</div>
+                                    <div class = "btn_alert button">ALERT</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class = "user">
+                            <div class="user_container">
+                                <img src="img/user_img.jpg" alt=""/>
+                                <div class="user_info">
+                                    <p class="user_status">WAKE UP</p>
+                                    <p class="user_name">Mr. OWEN HERITAGE</p>
+                                    <p class="user_sleephours">Hours Sleeping: <strong>8 hours</strong></p>
+                                </div>
+                                <div class="button_wrapper">
+                                    <div class = "btn_poke button">POKE</div>
+                                    <div class = "btn_alert button">ALERT</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class = "user">
+                            <div class="user_container">
+                                <img src="img/user_img.jpg" alt=""/>
+                                <div class="user_info">
+                                    <p class="user_status">WAKE UP</p>
+                                    <p class="user_name">Mr. OWEN HERITAGE</p>
+                                    <p class="user_sleephours">Hours Sleeping: <strong>8 hours</strong></p>
+                                </div>
+                                <div class="button_wrapper">
+                                    <div class = "btn_poke button">POKE</div>
+                                    <div class = "btn_alert button">ALERT</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class = "user">
+                            <div class="user_container">
+                                <img src="img/user_img.jpg" alt=""/>
+                                <div class="user_info">
+                                    <p class="user_status">WAKE UP</p>
+                                    <p class="user_name">Mr. OWEN HERITAGE</p>
+                                    <p class="user_sleephours">Hours Sleeping: <strong>8 hours</strong></p>
+                                </div>
+                                <div class="button_wrapper">
+                                    <div class = "btn_poke button">POKE</div>
+                                    <div class = "btn_alert button">ALERT</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class = "user">
+                            <div class="user_container">
+                                <img src="img/user_img.jpg" alt=""/>
+                                <div class="user_info">
+                                    <p class="user_status">WAKE UP</p>
+                                    <p class="user_name">Mr. OWEN HERITAGE</p>
+                                    <p class="user_sleephours">Hours Sleeping: <strong>8 hours</strong></p>
+                                </div>
+                                <div class="button_wrapper">
+                                    <div class = "btn_poke button">POKE</div>
+                                    <div class = "btn_alert button">ALERT</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class = "user">
+                            <div class="user_container">
+                                <img src="img/user_img.jpg" alt=""/>
+                                <div class="user_info">
+                                    <p class="user_status">WAKE UP</p>
+                                    <p class="user_name">Mr. OWEN HERITAGE</p>
+                                    <p class="user_sleephours">Hours Sleeping: <strong>8 hours</strong></p>
+                                </div>
+                                <div class="button_wrapper">
+                                    <div class = "btn_poke button">POKE</div>
+                                    <div class = "btn_alert button">ALERT</div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>   
                 </div>
 
-
-
-<!--                     <h3>PLEASE, WAKE ME UP:</h3> -->
-                   <!--  <section id="users_alarm">
-                        <div class="user">
-                            <img src="img/user_img.jpg">
-                            <div class="user_content">
-                                <p class = "user_status">WAKE UP</p>
-                                <h4 class="user_name">OWEN HERITAGE</h4>
-                                <p class="user_sleephours">Sleeping: 4hours</p>
-                                <div class="btn_poke buttons">POKE</div>
-                                <div class="btn_speaker buttons">ALARM</div>
-                            </div>
-                        </div>
-
-                        <div class="user">
-                            <img src="img/user_img.jpg">
-                            <div class="user_content">
-                                <p class = "user_status">WAKE UP</p>
-                                <h4 class="user_name">OWEN HERITAGE</h4>
-                                <p class="user_sleephours">Sleeping: 4hours</p>
-                                <div class="btn_poke buttons">POKE</div>
-                                <div class="btn_speaker buttons">ALARM</div>
-                            </div>
-                        </div>
-
-                        <div class="user">
-                            <img src="img/user_img.jpg">
-                            <div class="user_content">
-                                <p class = "user_status">WAKE UP</p>
-                                <h4 class="user_name">OWEN HERITAGE</h4>
-                                <p class="user_sleephours">Sleeping: 4hours</p>
-                                <div class="btn_poke buttons">POKE</div>
-                                <div class="btn_speaker buttons">ALARM</div>
-                            </div>
-                        </div>
-
-                        <div class="user">
-                            <img src="img/user_img.jpg">
-                            <div class="user_content">
-                                <p class = "user_status">WAKE UP</p>
-                                <h4 class="user_name">OWEN HERITAGE</h4>
-                                <p class="user_sleephours">Sleeping: 4hours</p>
-                                <div class="btn_poke buttons">POKE</div>
-                                <div class="btn_speaker buttons">ALARM</div>
-                            </div>
-                        </div>
-
-
-                    </section> -->
-
-<!--                     <h3>LEAVE ME ALONE:</h3>  -->
-<!--                     <section id="users_sleeping">
-
-                    </section> -->
-<!--                 </div>
- -->
                 <article class="headers login_header "><h2>LOG IN</h2></article>
                 <article class="headers contact_header"><h2>CONTACT</h2></article>
 
@@ -123,5 +163,6 @@
 
 
         </div>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
