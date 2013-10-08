@@ -137,7 +137,7 @@ section#content{
 		float: left;	
 		width: 90%;
 		margin: 0 auto;
-		height: auto;
+		height: 100%;
 		background: black;
 		padding: 5%;
 
@@ -155,6 +155,7 @@ section#content{
 					margin: 0.5%;
 					background: #333;
 					float: left;
+					overflow: hidden;
 
 					img{
 						width: 40%;
@@ -172,6 +173,15 @@ section#content{
 						font-weight: 100;
 						line-height: 20px;
 					}
+
+					p.deep_sleep{
+						color: #FF931E;
+					}
+
+					p.sleep_wake{
+						color:  #29ABE2;
+					}
+
 
 					p.user_name{
 						float: left;
@@ -215,6 +225,25 @@ section#content{
 					}
 					div.btn_alert{
 						background-color: #29ABE2; 
+					}
+					div.btn_emergency{
+						background-color: #FF931E;
+						color: black;
+						padding: 4% 0; 
+					}
+				}
+			}
+
+			li.not_sleeping{
+				div.user_container{
+
+					div.btn_poke{
+						background-color: #4D4D4D;
+						color: #333;
+					}
+					div.btn_alert{
+						background-color: #808080; 
+						color: #333;
 					}
 				}
 			}
@@ -329,6 +358,10 @@ section#content{
 								
 							}
 
+							div.btn_emergency{
+								padding: 45% 0;
+							}
+
 						}
 					}
 				}
@@ -382,7 +415,7 @@ section#content{
 			}
 		}
 
-div#users_wrapper{	
+	div#users_wrapper{	
 			width: 100%;
 			margin: 3% 0;
 			padding: 0;
@@ -427,6 +460,10 @@ div#users_wrapper{
 								transition:all 2s ease-in-out;
 		
 							}
+
+							div.btn_emergency{
+								padding: 45% 0;
+							}
 						}
 					}
 				}
@@ -442,7 +479,26 @@ div#users_wrapper{
 
 .is_clicked{
     transition:all 500ms ease-in-out;
-	height: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.poke_clicked{
+    transition:all 2s ease-in-out;
+	width: 0 !important;
+	margin-left: 200% !important;
+
+}
+
+.alert_clicked{
+    transition:all 2.5s ease-in-out;
+	background: red !important;
+	margin-left: 4000px !important;
+}
+
+.user_clicked{
+    transition:all 1s ease-in-out;
+
 }
 
 
